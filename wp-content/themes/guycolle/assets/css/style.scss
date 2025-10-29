@@ -1,0 +1,190 @@
+@use "../../../../../node_modules/bootstrap/scss/bootstrap";
+@import url("https://use.typekit.net/ink5gxt.css");
+
+$black: #000000;
+$white: #ffffff;
+$grey: #bababa;
+$greylight: #eef0f7;
+$blue: #00FFFF;
+$orange: #FF9068;
+
+$font_regular: normal 400 1.4375rem "helvetica-neue-lt-pro", sans-serif;
+$font_regular_italic: italic 400 1.4375rem "helvetica-neue-lt-pro", sans-serif;
+$font_bold: normal 700 1.4375rem "helvetica-neue-lt-pro", sans-serif;
+$font_bold_italic: italic 700 1.4375rem "helvetica-neue-lt-pro", sans-serif;
+
+
+// GENERAL
+body {
+    font: $font_regular;
+    font-size: 1.4375rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: $white;
+}
+
+
+h1 {
+    font: $font_bold;
+    font-size: calc((8.5 - 1) * 1.2vw + 1rem);
+    line-height: 1;
+    span {
+        color: black;
+    }
+}
+
+h2 {
+    font: $font_bold;
+    line-height: 1.2;
+    font-size: calc((1.8 - 1) * 1.2vw + 1rem);
+    &.subline {
+        font-weight: 700;
+        line-height: 1;
+        font-size: calc((4.5 - 1) * 1.2vw + 1rem);
+    }
+}
+
+h3 {
+    font: $font_bold;
+    line-height: 1.5;
+    font-size: calc((1.6 - 1) * 1.2vw + 1rem);
+}
+
+p {
+    font: $font_regular;
+    margin-bottom: 20px;
+    font-size: calc((1.6 - 1) * 1.2vw + 1rem);
+    line-height: 1.6;
+    &.subline {
+        font-weight: 700;
+        line-height: 1;
+        font-size: calc((4.5 - 1) * 1.2vw + 1rem);
+    }
+}
+
+a {
+    color: $black;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+header, section, footer {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    height: auto;
+}
+
+header svg, section svg, footer svg {
+    height: 3.5rem;
+    @media (min-width: 576px) {
+        height: 5rem;
+    }
+}
+
+// HEADER
+header {
+    .logo {
+        height: 5rem;
+    }
+    .navbar-toggler {
+        border: 0;
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    #CONTACTnav {
+        ul {
+            li {
+                text-align: center;
+
+                &:first-child {
+                    border-right: 1px solid $white;
+                    margin: 0 5px;
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+    #CONTACTnav,
+    #MAINnav {
+        display:none;
+        @media (min-width: 576px) {
+            display: block;
+        }
+    }
+
+    #MAINMOBILEnav {
+        margin-top: 5vh;
+        @media (min-width: 576px) {
+            display: none !important;
+        }
+    }
+    .nav-link {
+        color: $white;
+        font: $font_regular;
+        font-size: calc((1.6 - 1) * 1.2vw + 1rem);
+        line-height: 1.6;
+    }
+}
+
+// CONTENT
+.content {
+    position: relative;
+}
+
+
+// FOOTER
+footer {
+    p {
+        &.subline {
+            margin-top: 70px;
+            margin-bottom: 80px;
+        }
+    }
+    a {
+        color: $white;
+        text-decoration: none;
+        &:hover {
+            color: black;
+        }
+        &.bgwhite {
+            background-color: $white;
+            display: block;
+            filter: drop-shadow(0px 0px 15px #424242);
+        }
+    }
+    #footernav {
+        margin-top: 50px;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+                text-align: left;
+                display: inline-block;
+                margin: 0 15px 0 0;
+                padding: 0 20px 0 0;
+                border-right: 1px solid $white;
+                &:last-child {
+                    border-right: 0;
+                }
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    .nav-link {
+        color: $white;
+        font: $font_regular;
+        font-size: calc((1.6 - 1) * 1.2vw + 1rem);
+        line-height: 1.6;
+    }
+}
