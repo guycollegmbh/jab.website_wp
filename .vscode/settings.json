@@ -1,0 +1,40 @@
+{
+    "git.ignoreLimitWarning": true,
+
+    "deploy.reloaded": {
+        "targets": [
+            {
+                "type": "ftp",
+                "name": "https://www2.guycolle.com/",
+                "description": "STAGE",
+                "dir": "/public_html/jabxburn_ch/wordpress",
+                "host": "s132.cyon.net", "port": 21,
+                "secure": false,
+                "user": "nijuzajo", "password": "demaqA?7jAu*2qA:4jment"
+            }/*,
+            {
+                "type": "ftp",
+                "name": "https://guycolle.com/",
+                "description": "LIVE",
+                "dir": "/",
+                "host": "80.74.145.45", "port": 21,
+                "secure": false,
+                "user": "experience", "password": "tH%347xg8"
+            }*/
+        ]
+    },
+    "liveSassCompile.settings.generateMap": true,
+    "liveSassCompile.settings.watchOnLaunch": true,
+    "liveSassCompile.settings.formats": [
+        /*{
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": null
+        },*/
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            //"savePath": "~/min/"
+        }
+    ],
+}
