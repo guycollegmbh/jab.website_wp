@@ -1,0 +1,29 @@
+.teaserelemente-block {
+  ol, li {
+    margin: 0;
+    padding: 0;
+  }
+  ol {
+    display: table;
+    counter-reset: item;
+    > li {
+      font-weight: bold;
+      display: table-row;
+      list-style: none;
+      counter-increment: item;
+      border-spacing: 0 30px;
+      &:before {
+        display: table-cell;
+        content: counters(item, ".") " ";
+        padding-right: .3em;
+      }
+      ol > li {
+        font-weight: normal;
+        border-spacing: 0;
+      }
+      ul {
+        margin: 20px 0;
+      }
+    }
+  }
+}

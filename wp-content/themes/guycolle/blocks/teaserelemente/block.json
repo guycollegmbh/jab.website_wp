@@ -1,0 +1,14 @@
+{
+    "name": "acf/teaserelemente",
+    "title": "Teaser Newsletter",
+    "description": "Teaserelemente für Newsletter Landingpage",
+    "style": "teaserelemente",
+    "script": "teaserelemente",
+    "category": "guc-custom-category",
+    "icon": "screenoptions",
+    "keywords": ["teaserelemente", "quote"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "teaserelemente.php"
+    }
+}
