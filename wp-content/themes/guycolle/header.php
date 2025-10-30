@@ -38,9 +38,9 @@ Realisation by GUYCOLLE GmbH, https://www.guycolle.com
 	<link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon/favicon-16x16.png">
 	<link rel="manifest" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon/manifest.json">
+	<link rel="stylesheet" href="https://use.typekit.net/ink5gxt.css">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon/ms-icon-144x144.png">
- 
 
 	<?php wp_head(); ?>
 </head>
@@ -60,57 +60,5 @@ Realisation by GUYCOLLE GmbH, https://www.guycolle.com
  * @package hmh
  */
 
-$logo = get_field('logo', 'option');
+//$logo = get_field('logo', 'option');
 ?>
-<header>
-	<nav class="navbar navbar-expand-sm">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="/"><?php echo $logo; ?></a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#MAINMOBILEnav" aria-controls="MAINMOBILEnav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<?php
-				wp_nav_menu([
-					'menu'            => 'contact-menu',
-					'theme_location'  => 'contact-menu',
-					'container'       => 'div',
-					'container_id'    => 'CONTACTnav',
-					'container_class' => 'collapse navbar-collapse',
-					'menu_id'         => 'navbarContent',
-					'menu_class'      => 'navbar-nav ms-auto mb-2 mb-lg-0',
-					'depth'           => 2,
-					'fallback_cb'     => 'bs4navwalker::fallback',
-					'walker'          => new bs4navwalker()
-				]);
-			?>
-			<?php
-				wp_nav_menu([
-					'menu'            => 'menu',
-					'theme_location'  => 'menu',
-					'container'       => 'div',
-					'container_id'    => 'MAINnav',
-					'container_class' => 'collapse navbar-collapse',
-					'menu_id'         => 'navbarContent',
-					'menu_class'      => 'navbar-nav ms-auto mb-2 mb-lg-0',
-					'depth'           => 2,
-					'fallback_cb'     => 'bs4navwalker::fallback',
-					'walker'          => new bs4navwalker()
-				]);
-			?>
-			<?php
-				wp_nav_menu([
-					'menu'            => 'mobile-menu',
-					'theme_location'  => 'mobile-menu',
-					'container'       => 'div',
-					'container_id'    => 'MAINMOBILEnav',
-					'container_class' => 'collapse navbar-collapse',
-					'menu_id'         => 'navbarContent',
-					'menu_class'      => 'navbar-nav ms-auto mb-2 mb-lg-0',
-					'depth'           => 2,
-					'fallback_cb'     => 'bs4navwalker::fallback',
-					'walker'          => new bs4navwalker()
-				]);
-			?>
-		</div>
-	</nav>
-</header>
