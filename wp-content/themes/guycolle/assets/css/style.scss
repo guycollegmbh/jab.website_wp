@@ -1,5 +1,4 @@
 @use "../../../../../node_modules/bootstrap/scss/bootstrap";
-@import url("https://use.typekit.net/ink5gxt.css");
 
 $black: #000000;
 $white: #ffffff;
@@ -17,30 +16,28 @@ $font_bold_italic: italic 700 1.4375rem "helvetica-neue-lt-pro", sans-serif;
 // GENERAL
 body {
     font: $font_regular;
-    font-size: 1.4375rem;
-    background-color: rgba(0, 0, 0, 0.7);
+    //font-size: 1.4375rem;
+    background-color: rgba(0, 0, 0, 1.0);
     color: $white;
+    @media (min-width: 768px) {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
 }
 
 
 h1 {
     font: $font_bold;
-    font-size: calc((8.5 - 1) * 1.2vw + 1rem);
+    font-size: clamp(3.125rem, 2.525rem + 3vw, 5rem);
     line-height: 1;
-    span {
-        color: black;
-    }
+    color: $blue;
+    filter: drop-shadow(-8px 8px 40px $blue);
 }
 
 h2 {
     font: $font_bold;
     line-height: 1.2;
-    font-size: calc((1.8 - 1) * 1.2vw + 1rem);
-    &.subline {
-        font-weight: 700;
-        line-height: 1;
-        font-size: calc((4.5 - 1) * 1.2vw + 1rem);
-    }
+    font-size: clamp(1.875rem, 0.775rem + 5.5vw, 5.3125rem);
+    color: $orange;
 }
 
 h3 {
@@ -52,13 +49,8 @@ h3 {
 p {
     font: $font_regular;
     margin-bottom: 20px;
-    font-size: calc((1.6 - 1) * 1.2vw + 1rem);
-    line-height: 1.6;
-    &.subline {
-        font-weight: 700;
-        line-height: 1;
-        font-size: calc((4.5 - 1) * 1.2vw + 1rem);
-    }
+    font-size: clamp(1.25rem, 0.95rem + 1.5vw, 2.1875rem);
+    line-height: clamp(1.25rem, 0.59rem + 3.3vw, 3.3125rem);
 }
 
 a {
@@ -138,6 +130,9 @@ header {
 
 // FOOTER
 footer {
+    margin-top: 128px;
+    padding: 23px 45px;
+    background-color: $black;
     p {
         &.subline {
             margin-top: 70px;
@@ -145,10 +140,13 @@ footer {
         }
     }
     a {
-        color: $white;
+        color: $blue;
         text-decoration: none;
+        font-size: 25px;
+        text-transform: uppercase;
+        line-height: 1;
         &:hover {
-            color: black;
+            color: $blue;
         }
         &.bgwhite {
             background-color: $white;
@@ -179,6 +177,19 @@ footer {
                     }
                 }
             }
+        }
+    }
+    .instagram {
+        float: right;
+        padding: 8px 15px 7px 0;
+        border-right: 1px solid $blue;
+        margin-right: 15px;
+    }
+    .links {
+        float: right;
+        width: 160px;
+        a:hover {
+            filter: drop-shadow(-8px 8px 20px $blue);
         }
     }
     .nav-link {
