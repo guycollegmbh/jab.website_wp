@@ -5,7 +5,7 @@
         "targets": [
             {
                 "type": "ftp",
-                "name": "https://www2.guycolle.com/",
+                "name": "https://jabxburn.guycolle.dev/",
                 "description": "STAGE",
                 "dir": "/public_html/jabxburn_ch/wordpress",
                 "host": "s132.cyon.net", "port": 21,
